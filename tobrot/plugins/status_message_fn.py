@@ -81,9 +81,9 @@ async def status_message_f(client, message):  # weird code but 'This is the way'
                 msg += f"\n<b>│</b>"
                 msg += f"\n<b>├ {msgg}</b>" 
                 msg += f"\n<b>│</b>"
-                msg += f"\n<b>├ ❌ 𝙲𝚊𝚗𝚌𝚎𝚕:</b> <code>/cancel4 {file.gid}</code>"
+                msg += f"\n<b>├ ❌ </b> <code>/cancel4 {file.gid}</code>"
                 msg += f"\n<b>│</b>"
-                msg += f"\n<b>╰─⚙️ 🚦 Using Engine:-Aria2 🚦</b>"
+                msg += f"\n<b>╰─🔹𝙿𝚛𝚒𝚟𝚊𝚝𝚎 𝙻𝚎𝚎𝚌𝚑🔹</b>"
                 msg += "\n"
                 
         hr, mi, se = up_time(time.time() - BOT_START_TIME)
@@ -95,7 +95,7 @@ async def status_message_f(client, message):  # weird code but 'This is the way'
         free = humanbytes(free)
 
         ms_g = (
-            f"<b>🚧 Private Leech 🧲 🚧</b>"
+            f"<b></b>"
         )
         if msg == "":
             msg = "📊 No Active, Queued or Paused TORRENTs"
