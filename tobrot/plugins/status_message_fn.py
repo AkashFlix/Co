@@ -102,7 +102,7 @@ async def status_message_f(client, message):  # weird code but 'This is the way'
             f"<b></b>"
         )
         if msg == "":
-            msg = "📊 No Active, Queued or Paused TORRENTs"
+            msg = "📊 𝙽𝚘 𝙰𝚌𝚝𝚒𝚟𝚎, 𝚀𝚞𝚎𝚞𝚎𝚍 𝚘𝚛 𝙿𝚊𝚞𝚜𝚎𝚍 𝚃𝙾𝚁𝚁𝙴𝙽𝚃𝚜"
             msg = ms_g + "\n" + msg
             await to_edit.edit(msg)
             break
