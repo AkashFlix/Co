@@ -85,7 +85,7 @@ async def status_message_f(client, message):  # weird code but 'This is the way'
                 msg += f"\n<b>│</b>"
                 msg += f"\n<b>├ {msgg}</b>"
                 msg += f"\n<b>│</b>"
-                msg += f"\n<b>├ ❌ </b> <code>/cancel4 {file.gid}</code>"
+                msg += f"\n<b>├ ❌ 𝙶𝙸𝙳: </b> <code>{file.gid}</code>"
                 msg += f"\n<b>│</b>"
                 msg += f"\n<b>╰─🔹𝙿𝚛𝚒𝚟𝚊𝚝𝚎 𝙻𝚎𝚎𝚌𝚑🔹</b>"
                 msg += "\n"
