@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+ #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # (c) Shrimadhav U K | gautamajay52
 
@@ -69,21 +69,21 @@ async def status_message_f(client, message):  # weird code but 'This is the way'
                 percentage = int(file.progress_string(0).split('%')[0])
                 prog = "[{0}{1}]".format("".join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 5))]),"".join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 5))]))
 
-                msg += f"\n<b>╭─⚙️ ⏬ 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙄𝙉𝙂 ⏬ ⚙️</b>"
-                msg += f"\n<b>│</b>"
-                msg += f"\n<b>├</b> <code>{downloading_dir_name}</code>"
-                msg += f"\n<b>├</b> <b>{prog}</b>"
-                msg += f"\n<b>│</b>"
-                msg += f"\n<b>├ 📂 𝙏𝙤𝙩𝙖𝙡 𝙁𝙞𝙡𝙚 𝙎𝙞𝙯𝙚: {file.total_length_string()}</b>"
-                msg += f"\n<b>├ 📡 𝙋𝙧𝙤𝙜𝙧𝙚𝙨𝙨: {file.progress_string()}</b>"
-                msg += f"\n<b>├ ⏳ 𝙀𝙏𝘼: {file.eta_string()}</b>"
-                msg += f"\n<b>├ ⚡️ 𝙨𝙥𝙚𝙚𝙙: {file.download_speed_string()}</b>" 
-                msg += f"\n<b>│</b>"
-                msg += f"\n<b>├ {msgg}</b>" 
-                msg += f"\n<b>│</b>"
-                msg += f"\n<b>├ ❌ 𝙏𝙤 𝘾𝙖𝙣𝙘𝙚𝙡:</b> <code>/cancel4 {file.gid}</code>"
-                msg += f"\n<b>│</b>"
-                msg += f"\n<b>╰─⚙️ 🚦 Using Engine:-Aria2 🚦</b>"
+                msg += f"\n<b>╔═⚙️ ⏬ 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙄𝙉𝙂 ⏬ ⚙️</b>"
+                msg += f"\n<b>║</b>"
+                msg += f"\n<b>╠</b> <code>{downloading_dir_name}</code>"
+                msg += f"\n<b>╠</b> <b>{prog}</b>"
+                msg += f"\n<b>║</b>"
+                msg += f"\n<b>╠ 📂 𝙏𝙤𝙩𝙖𝙡 𝙁𝙞𝙡𝙚 𝙎𝙞𝙯𝙚: {file.total_length_string()}</b>"
+                msg += f"\n<b>╠ 📡 𝙋𝙧𝙤𝙜𝙧𝙚𝙨𝙨: {file.progress_string()}</b>"
+                msg += f"\n<b>╠ ⏳ 𝙀𝙏𝘼: {file.eta_string()}</b>"
+                msg += f"\n<b>╠ ⚡️ 𝙨𝙥𝙚𝙚𝙙: {file.download_speed_string()}</b>" 
+                msg += f"\n<b>║</b>"
+                msg += f"\n<b>╠ {msgg}</b>" 
+                msg += f"\n<b>║</b>"
+                msg += f"\n<b>╠ ❌ 𝙏𝙤 𝘾𝙖𝙣𝙘𝙚𝙡:</b> <code>/cancel4 {file.gid}</code>"
+                msg += f"\n<b>║</b>"
+                msg += f"\n<b>╚═⚙️ 🚦 Using Engine:-Aria2 🚦</b>"
                 msg += "\n"
 
         hr, mi, se = up_time(time.time() - BOT_START_TIME)
