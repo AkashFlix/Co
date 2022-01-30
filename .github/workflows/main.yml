@@ -1,4 +1,4 @@
-name: Manually Deploy to heroku hoi
+name: BlackBolt Leech V1
 
 on: workflow_dispatch
 
