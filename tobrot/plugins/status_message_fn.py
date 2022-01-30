@@ -69,7 +69,7 @@ async def status_message_f(client, message):  # weird code but 'This is the way'
                 percentage = int(file.progress_string(0).split('%')[0])
                 prog = "[{0}{1}]".format("".join([FINISHED_PROGRESS_STR for i in range(math.floor(percentage / 5))]),"".join([UN_FINISHED_PROGRESS_STR for i in range(20 - math.floor(percentage / 5))]))
 
-                msg += f"\n<b>╭─⚙️ ⏬ 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚒𝚗𝚐 ⏬ ⚙️</b>"
+                msg += f"\n<b>╭─⚙️ 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚒𝚗𝚐 ⚙️ ───•</b>"
                 msg += f"\n<b>│</b>"
                 msg += f"\n<b>├</b> <i>{downloading_dir_name}</i>"
                 msg += f"\n<b>│</b>"
@@ -85,9 +85,9 @@ async def status_message_f(client, message):  # weird code but 'This is the way'
                 msg += f"\n<b>│</b>"
                 msg += f"\n<b>├ {msgg}</b>"
                 msg += f"\n<b>│</b>"
-                msg += f"\n<b>├ ❌ 𝙶𝙸𝙳: </b> <code>{file.gid}</code>"
+                msg += f"\n<b>├ ❌ 𝙶𝙸𝙳: </b> <code>/cl1 {file.gid}</code>"
                 msg += f"\n<b>│</b>"
-                msg += f"\n<b>╰─🔹𝙿𝚛𝚒𝚟𝚊𝚝𝚎 𝙻𝚎𝚎𝚌𝚑🔹</b>"
+                msg += f"\n<b>╰─🔹𝙱𝚕𝚊𝚌𝚔𝙱𝚘𝚕𝚝 𝙻𝚎𝚎𝚌𝚑🔹──•</b>"
                 msg += "\n"
                 
         hr, mi, se = up_time(time.time() - BOT_START_TIME)
