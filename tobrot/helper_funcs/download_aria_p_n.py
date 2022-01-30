@@ -307,8 +307,8 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
                         LOGGER.info(
                             f"𝘾𝙖𝙣𝙘𝙚𝙡𝙡𝙞𝙣𝙜 𝙙𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙞𝙣𝙜 𝙤𝙛 {file.name} 𝙢𝙖𝙮 𝙗𝙚 𝙙𝙪𝙚 𝙩𝙤 𝙨𝙡𝙤𝙬 𝙩𝙤𝙧𝙧𝙚𝙣𝙩🐌"
                         )
-                        await event.edit(
-                            f"😵‍💫𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 𝙘𝙖𝙣𝙘𝙚𝙡𝙡𝙚𝙙 :\n<code>{file.name}</code>\n\n #DeadTorrent⚰️"
+                        await event.reply(
+                            f"😵‍💫𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 𝙘𝙖𝙣𝙘𝙚𝙡𝙡𝙚𝙙 :\n<code>{file.name}</code>", quote=True
                         )
                         file.remove(force=True, files=True)
                         return
@@ -322,17 +322,17 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
                 # await check_progress_for_dl(aria2, gid, event, previous_message)
             else:
                 LOGGER.info(
-                    f"Downloaded Successfully: `{file.name} ({file.total_length_string()})` 🔊"
+                    f"<i>🔻𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙚𝙙 𝙎𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮:</i> ✅: `{file.name} ({file.total_length_string()})` "
                 )
                 # await asyncio.sleep(EDIT_SLEEP_TIME_OUT)
                 if not file.is_metadata:
                     await event.edit(
-                        f"Downloaded Successfully: `{file.name} ({file.total_length_string()})` 🔊"
+                        f"🔻𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙚𝙙 𝙎𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮: `{file.name} ({file.total_length_string()})` 🔊" 
                     )
                 return
         except aria2p.client.ClientException:
             await event.reply(
-                f"Download cancelled :\n""🔻𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙚𝙙 𝙎𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮: `{file.name} ({file.total_length_string()})` 🔊", quote=True
+                f"<i>⛔ 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 𝙘𝙖𝙣𝙘𝙚𝙡𝙡𝙚𝙙</i> :\n<code>{file.name} ({file.total_length_string()})</code>", quote=True
             )
             return
         except MessageNotModified as ep:
@@ -347,13 +347,13 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
             LOGGER.info(str(e))
             if "not found" in str(e) or "'file'" in str(e):
                 await event.edit(
-                    f"𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 𝙘𝙖𝙣𝙘𝙚𝙡𝙡𝙚𝙙 :\n<code>{file.name} ({file.total_length_string()})</code>❌"
-                    )
+                    f"<i>𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 𝙘𝙖𝙣𝙘𝙚𝙡𝙡𝙚𝙙</i> :\n<code>{file.name} ({file.total_length_string()})</code>❌"
+                )
                 return
             else:
                 LOGGER.info(str(e))
                 await event.edit(
-                    "<u>error</u> :\n<code>{}</code> \n\n#error".format(str(e))
+                    "<u>ERROR</u>:\n<code>{}</code> \n\n#Error".format(str(e))
                 )
                 return
 
